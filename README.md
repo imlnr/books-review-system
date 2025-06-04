@@ -121,7 +121,7 @@ Authorization: Bearer <your_jwt_token>
 ## 🧪 Running Tests
 
 ```bash
-npm test
+npm run server
 ```
 
 ## 📝 License
