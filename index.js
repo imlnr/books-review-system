@@ -1,12 +1,17 @@
 const express = require("express")
 const cors = require("cors");
 const { connection } = require("./config/db");
+const { BooksRouter } = require("./routes/book.routes");
+const { userRouter } = require("./routes/user.routes");
+const { ReviewRoutes } = require("./routes/reveiw.routes");
 const PORT = process.env.PORT || 4500;
 
 const app = express();
 app.use(cors())
 app.use(express.json());
-
+app.use("/books", BooksRouter);
+app.use("/user", userRouter);
+app.use("/review", ReviewRoutes)
 
 app.listen(PORT, async () => {
     try {
@@ -20,3 +25,4 @@ app.listen(PORT, async () => {
 app.get("/", (req, res) => {
     res.json({ msg: "Welcome to Books Review API" })
 })
+
