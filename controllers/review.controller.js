@@ -11,7 +11,7 @@ const createReview = async (req, res) => {
         await review.save();
         res.status(201).json(review);
     } catch (err) {
-        // Duplicate review error (unique index violation)
+        // Duplicate checking
         if (err.code === 11000) {
             return res.status(400).json({ error: 'You have already reviewed this book' });
         }
@@ -19,11 +19,10 @@ const createReview = async (req, res) => {
     }
 };
 
-// ✏️ Update a review (only your own review)
 const updateReview = async (req, res) => {
     try {
         const review = await ReviewModel.findOneAndUpdate(
-            { _id: req.params.id, user: req.userID },
+            { _id: req.params.id, user: req.body.userID },
             req.body,
             { new: true }
         );
@@ -38,7 +37,6 @@ const updateReview = async (req, res) => {
     }
 };
 
-// ❌ Delete a review (only your own review)
 const deleteReview = async (req, res) => {
     try {
         const review = await ReviewModel.findByIdAndDelete(req.params.id);

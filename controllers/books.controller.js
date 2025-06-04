@@ -31,6 +31,7 @@ const getAllBooks = async (req, res) => {
 const getBookById = async (req, res) => {
     try {
         const { id } = req.params;
+        console.log(id)
         const book = await BooksModel.findById(id);
 
         if (!book) return res.status(404).json({ error: 'Book not found' });
@@ -60,6 +61,7 @@ const getBookById = async (req, res) => {
 const searchBooks = async (req, res) => {
     try {
         const { q } = req.query;
+        console.log(q)
         if (!q) return res.status(400).json({ error: 'Missing search query' });
 
         const regex = new RegExp(q, 'i');
