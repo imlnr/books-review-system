@@ -73,21 +73,19 @@ The API documentation is available at `/api-docs` when the server is running.
 ### Available Endpoints
 
 #### Authentication
-- `POST /auth/register` - Register a new user
-- `POST /auth/login` - Login user
+- `POST /user/register` - Register a new user
+- `POST /user/login` - Login user
 
 #### Books
-- `GET /books` - Get all books
+- `GET /allBooks` - Get all books
 - `POST /books` - Create a new book
 - `GET /books/:id` - Get a specific book
-- `PUT /books/:id` - Update a book
-- `DELETE /books/:id` - Delete a book
+- `GET /books/search` - Search book by title or author
 
 #### Reviews
-- `POST /reviews` - Create a new review
-- `GET /books/:bookId/reviews` - Get all reviews for a book
-- `PUT /reviews/:id` - Update a review
-- `DELETE /reviews/:id` - Delete a review
+- `POST /review` - Create a new review
+- `PATCH /review/:id` - Update a review
+- `DELETE /review/:id` - Delete a review
 
 ## 📊 Database Schema
 
