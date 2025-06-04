@@ -2,6 +2,21 @@
 
 A robust RESTful API for managing books and their reviews, built with Node.js, Express, and MongoDB.
 
+## 🌐 Live Demo
+
+The API is deployed and available at: [https://books-review-system.onrender.com](https://books-review-system.onrender.com)
+
+## 🎥 Video Presentation
+
+[![Books Review System Demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+
+Watch our video presentation to see the Books Review System in action:
+- API Overview and Features
+- Authentication Flow
+- Book Management Demo
+- Review System Walkthrough
+- API Documentation Tour
+
 ## 🚀 Features
 
 - User authentication and authorization
