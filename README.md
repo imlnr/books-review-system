@@ -73,7 +73,7 @@ The API documentation is available at `/api-docs` when the server is running.
 ### Available Endpoints
 
 #### Authentication
-- `POST /user/register` - Register a new user
+- `POST /user/signup` - Register a new user
 - `POST /user/login` - Login user
 
 #### Books
