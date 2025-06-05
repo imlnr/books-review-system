@@ -4,7 +4,7 @@ const userRouter = express.Router();
 
 /**
  * @swagger
- * /user/register:
+ * /user/signup:
  *   post:
  *     summary: Register a new user
  *     tags: [Users]
@@ -33,7 +33,7 @@ const userRouter = express.Router();
  *       400:
  *         description: Invalid input
  */
-userRouter.post("/register", registerUser);
+userRouter.post("/signup", registerUser);
 
 /**
  * @swagger
