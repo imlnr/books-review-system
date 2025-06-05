@@ -8,6 +8,14 @@ const { userRouter } = require("./routes/user.routes");
 const { ReviewRoutes } = require("./routes/reveiw.routes");
 const PORT = process.env.PORT || 4500;
 
+// CORS configuration
+const corsOptions = {
+    origin: '*', // Allow all origins
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+};
+
 // Swagger configuration
 const swaggerOptions = {
     definition: {
@@ -39,7 +47,7 @@ const swaggerOptions = {
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
 const app = express();
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.json());
 
 // Swagger UI endpoint
