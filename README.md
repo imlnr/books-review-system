@@ -8,7 +8,7 @@ The API is deployed and available at: [https://books-review-system.onrender.com]
 
 ## 🎥 Video Presentation
 
-[![Books Review System Demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+[![Books Review System Demo]](https://drive.google.com/file/d/1rCKPSBnJPIZS5doqN5oPhz0spd_I4wC6/view?usp=sharing)
 
 Watch our video presentation to see the Books Review System in action:
 - API Overview and Features
